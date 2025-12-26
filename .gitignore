@@ -1,0 +1,18 @@
+# --- Rust / Cargo ---
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# --- Bevy & Egui ---
+# If you decide to use persistent Egui settings
+.egui/
+
+# --- IDEs & Editors ---
+.vscode/
+.idea/
+*.iml
+*.code-workspace
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
