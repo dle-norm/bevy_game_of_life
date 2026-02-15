@@ -17,12 +17,12 @@ A simple implementation of **Conway's Game of Life** built with the [Bevy Engine
 
 ## Controls
 
-| Key / Action   | Function                      |
-| :------------- | :---------------------------- |
-| **Space**      | Play / Pause the simulation   |
-| **Left Click** | Draw / Place living cells     |
-| **R**          | Reset (Clear) the entire grid |
-| **Esc**        | Quit application              |
+| Key / Action   | Function                        |
+| :------------- | :------------------------------ |
+| **Space**      | Play / Pause the simulation     |
+| **Left Click** | Draw / Place living cells       |
+| **R**          | Reset (Clear) the entire grid   |
+| **Esc**        | Quit application (Desktop only) |
 
 ## How to Run
 

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bevy Game of Life</title>
+    <style>
+      body {
+        margin: 0;
+        /* Cache les barres de défilement */
+        overflow: hidden;
+      }
+      /* Fait en sorte que le canvas remplisse toute la fenêtre */
+      canvas#bevy {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Le canvas où le jeu sera rendu -->
+    <canvas id="bevy"></canvas>
+    <script type="module">
+      // Charge et exécute le module WASM. Assurez-vous que le nom correspond à celui de votre paquet dans Cargo.toml
+      import init from "./bevy_game_of_life.js";
+      init();
+    </script>
+  </body>
+</html>
