@@ -11,9 +11,9 @@
         overflow: hidden;
       }
       /* Fait en sorte que le canvas remplisse toute la fenêtre */
-      canvas#bevy {
-        width: 100vw;
-        height: 100vh;
+      canvas#bevy { 
+        width: 100% !important;
+        height: 100% !important;
       }
     </style>
   </head>
@@ -21,9 +21,17 @@
     <!-- Le canvas où le jeu sera rendu -->
     <canvas id="bevy"></canvas>
     <script type="module">
-      // Charge et exécute le module WASM. Assurez-vous que le nom correspond à celui de votre paquet dans Cargo.toml
-      import init from "./bevy_game_of_life.js";
-      init();
+      // Importe la fonction d'initialisation et la fonction `run` depuis le module JS généré.
+      import init, { run } from "./pkg/bevy_game_of_life.js";
+
+      async function start() {
+        // Attend que le module WASM soit complètement chargé.
+        await init();
+        // Exécute la fonction `run` de votre application Bevy.
+        run();
+      }
+
+      start();
     </script>
   </body>
 </html>

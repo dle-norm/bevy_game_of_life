@@ -5,4 +5,12 @@ edition = "2021"
 
 [dependencies]
 bevy = "0.15"
-bevy_egui = "0.31"
+wasm-bindgen = "0.2"
+bevy_egui = { version = "0.31.1", default-features = false, features = ["render", "default_fonts"] }
+
+[target.wasm32-unknown-unknown.dependencies]
+getrandom_v2 = { version = "0.2", features = ["js"], package = "getrandom" }
+getrandom    = { version = "0.3", features = ["wasm_js"] }
+
+[lib]
+crate-type = ["cdylib", "rlib"]

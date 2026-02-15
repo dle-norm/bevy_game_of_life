@@ -1,0 +1,3 @@
+# This file configures Cargo to use the correct features for wasm32 targets.
+[target.wasm32-unknown-unknown]
+rustflags = ["--cfg=web_sys_unstable_apis"]
